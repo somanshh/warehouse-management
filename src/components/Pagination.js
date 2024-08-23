@@ -1,10 +1,12 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setCurrentPage } from '../redux/actions';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setCurrentPage } from "../redux/actions";
+import { globalStates } from "../redux/selectors";
 
 const Pagination = () => {
   const dispatch = useDispatch();
-  const { filteredWarehouses, currentPage, itemsPerPage } = useSelector(state => state);
+  const { filteredWarehouses, currentPage, itemsPerPage } =
+    useSelector(globalStates);
 
   const totalPages = Math.ceil(filteredWarehouses.length / itemsPerPage);
 
@@ -16,8 +18,8 @@ const Pagination = () => {
   return (
     <nav className="pagination">
       <ul>
-        {pageNumbers.map(number => (
-          <li key={number} className={number === currentPage ? 'active' : ''}>
+        {pageNumbers.map((number) => (
+          <li key={number} className={number === currentPage ? "active" : ""}>
             <button onClick={() => dispatch(setCurrentPage(number))}>
               {number}
             </button>

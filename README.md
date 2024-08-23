@@ -5,18 +5,27 @@ This project is a React-based warehouse management system that allows users to v
 ## Setup Instructions
 
 1. Clone the repository:
-git clone https://github.com/your-username/warehouse-management.git
-cd warehouse-management
+`git clone https://github.com/somanshh/warehouse-management.git`
 
-2. Install dependencies:
-npm install
+2. `cd warehouse-management`
 
-3. Start the development server:
-npm start
+3. Install dependencies:
+`npm install`
 
-4. Open your browser and navigate to `http://localhost:3000` to view the application.
+4. Start the development server:
+`npm start`
 
-## Testing the Application
+5. Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## Project Structure
+
+- `src/components`: Contains all React components
+- `src/pages`: Contains page-level components
+- `src/redux`: Contains Redux store, actions, and reducers
+- `src/App.js`: Main application component
+- `src/index.js`: Entry point of the application
+
+## About the Application
 
 1. **Viewing Warehouses:**
 - On the home page, you'll see a list of all warehouses.
@@ -38,28 +47,5 @@ npm start
 5. **Editing Warehouse Information:**
 - On the warehouse details page, click the "Edit" button.
 - Modify the warehouse information in the form that appears.
-- Add custom fields by clicking the "Add Custom Field" button.
 - Click "Save" to update the warehouse information or "Cancel" to discard changes.
 
-6. **Responsive Design:**
-- Test the application on different screen sizes to ensure it's responsive.
-
-## Technologies Used
-
-- React
-- Redux for state management
-- React Router for navigation
-- CSS for styling
-
-## Project Structure
-
-- `src/components`: Contains all React components
-- `src/pages`: Contains page-level components
-- `src/redux`: Contains Redux store, actions, and reducers
-- `src/App.js`: Main application component
-- `src/index.js`: Entry point of the application
-
-## Additional Notes
-
-- This project uses a static JSON file for data. In a real-world scenario, you would typically fetch this data from an API.
-- Custom fields are currently stored in component state. For persistence, you would need to update the Redux store and potentially send updates to a backend server.

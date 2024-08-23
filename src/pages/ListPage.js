@@ -6,23 +6,28 @@ import WarehouseList from '../components/WarehouseList';
 import Pagination from '../components/Pagination';
 
 const ListPage = () => {
-  const { filteredWarehouses, currentPage, itemsPerPage } = useSelector(state => state);
+	const { filteredWarehouses, currentPage, itemsPerPage } = useSelector(
+		(state) => state
+	);
 
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentWarehouses = filteredWarehouses.slice(indexOfFirstItem, indexOfLastItem);
+	const indexOfLastItem = currentPage * itemsPerPage;
+	const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+	const currentWarehouses = filteredWarehouses.slice(
+		indexOfFirstItem,
+		indexOfLastItem
+	);
 
-  return (
-    <div>
-      <h2>Warehouse Listing</h2>
-      <div className="search-filter-container">
-        <SearchBar />
-        <FilterBar />
-      </div>
-      <WarehouseList warehouses={currentWarehouses} />
-      <Pagination />
-    </div>
-  );
+	return (
+		<div className="list-container">
+			<h2>Warehouse Listing</h2>
+			<div className="search-filter-container">
+				<SearchBar />
+				<FilterBar />
+			</div>
+			<WarehouseList warehouses={currentWarehouses} />
+			<Pagination />
+		</div>
+	);
 };
 
 export default ListPage;

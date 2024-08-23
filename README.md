@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Warehouse Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React-based warehouse management system that allows users to view, search, filter, and edit warehouse information.
 
-## Available Scripts
+## Setup Instructions
 
-In the project directory, you can run:
+1. Clone the repository:
+git clone https://github.com/your-username/warehouse-management.git
+cd warehouse-management
 
-### `npm start`
+2. Install dependencies:
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Start the development server:
+npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-### `npm test`
+## Testing the Application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Viewing Warehouses:**
+- On the home page, you'll see a list of all warehouses.
+- Each warehouse card displays basic information and a link to view details.
 
-### `npm run build`
+2. **Searching Warehouses:**
+- Use the search bar at the top of the page to search for warehouses by name.
+- The list will update in real-time as you type.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Filtering Warehouses:**
+- Use the dropdown menus to filter warehouses by city and cluster.
+- Enter a minimum space available value to filter by space.
+- The list will update based on your selected filters.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Viewing Warehouse Details:**
+- Click on the "View Details" link on any warehouse card.
+- You'll be taken to a detailed view of that warehouse.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. **Editing Warehouse Information:**
+- On the warehouse details page, click the "Edit" button.
+- Modify the warehouse information in the form that appears.
+- Add custom fields by clicking the "Add Custom Field" button.
+- Click "Save" to update the warehouse information or "Cancel" to discard changes.
 
-### `npm run eject`
+6. **Responsive Design:**
+- Test the application on different screen sizes to ensure it's responsive.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React
+- Redux for state management
+- React Router for navigation
+- CSS for styling
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `src/components`: Contains all React components
+- `src/pages`: Contains page-level components
+- `src/redux`: Contains Redux store, actions, and reducers
+- `src/App.js`: Main application component
+- `src/index.js`: Entry point of the application
 
-## Learn More
+## Additional Notes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This project uses a static JSON file for data. In a real-world scenario, you would typically fetch this data from an API.
+- Custom fields are currently stored in component state. For persistence, you would need to update the Redux store and potentially send updates to a backend server.
